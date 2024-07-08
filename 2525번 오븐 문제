@@ -1,0 +1,11 @@
+A,B = map(int, input().split())
+C = int(input())
+m = B+C
+t = A+(B+C)//60
+if m<60:
+    print( A, m)
+else:
+    if t>=24 :
+        print(t-24,m%60)
+    else:
+        print(t,m%60)
