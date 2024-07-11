@@ -1,0 +1,18 @@
+arr  = []#초기화 안해서 입력하면 안된다 크기 지정혹은append 사용
+for i in range(1,31):
+    arr.append(i)
+for i in range(28):
+    a = int(input())
+    for j in range(len(arr)):
+        if(arr[j] == a):
+           arr[j] = 40 
+for i in range(30):
+    if arr[i]!=40:#즉지우는 거랑 같은거지 같은 숫자가 아닌걸 찾는거니까
+        print(i+1)           
+
+# student = [i for i in range(1,31)] 이렇게 배열 지정해주기
+# for i in range(28):
+#     data = int(input())
+#     student.remove(data) remove는 처음 한개만 지우므로 중복이면 for문으로 다 찾아서 지우기
+# print(min(student))
+# print(max(student))
