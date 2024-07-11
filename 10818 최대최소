@@ -1,0 +1,12 @@
+a = int(input())
+arr = list(map(int,input().split()))
+print(min(arr),max(arr))
+# t = 0
+# for i in range(len(arr)-1):
+#     for i in range(len(arr)-1):
+#         if arr[i]>arr[i+1]:
+#             t = arr[i]
+#             arr[i] = arr[i+1]
+#             arr[i+1] = t
+# i>max max =i
+# i<min min = i
