@@ -1,0 +1,16 @@
+n,m = map(int,input().split())
+
+arr = [0] * n
+for  a  in range(len(arr)):
+    arr[a] = a+1
+while(1):
+    try:
+        i,j = map(int,input().split())
+        t=arr[i-1]
+        arr[i-1] = arr[j-1]
+        arr[j-1] =t
+    except:
+        break
+for i in range(n):
+    print(arr[i],end=" ")
+    
