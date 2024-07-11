@@ -1,0 +1,18 @@
+#N은 바구니 개수 M은 몇번 넣을지 정해주기
+#IJ는 I부터 J까지 이고 K는 공의 번호
+#사실 eof를 사용해서 멈춰야한다 그걸 주의 하고 그다음에는 1번쨰 2번째는 인덱스로 0,1인걸 유의하자
+n,m = map(int, input().split())
+
+arr = [0] * n
+while(n):
+    try:
+        i,j,k = map(int,input().split())
+        for b in range(i-1,j):
+            # print(b)
+            arr[b] = k
+            # print(arr[n-1])
+    except:
+        break
+for i in range(len(arr)):
+    print(arr[i],end=" ")
+        
