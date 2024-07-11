@@ -1,0 +1,6 @@
+arr = []
+for i in range(9):
+    a = int(input())#차피 앤터 누르면 다시 반복문위로 올라가는 원리임
+    arr.append(a)
+print(max(arr))
+print(arr.index(max(arr))+1)
