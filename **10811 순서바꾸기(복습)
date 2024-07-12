@@ -1,0 +1,33 @@
+n,m = map(int, input().split())
+arr = []
+for i in range(n):
+    arr.append(i+1)
+while(1):
+    try:
+        a,b = map(int, input().split())
+        if b - a == 1 or b - a == 0:
+                t = arr[b-1]
+                arr[b-1] = arr[a-1]
+                arr[a-1] = t
+                # print(arr)
+        else:
+            for i in range((b-a+1)//2):
+                print("회차: %d"%(i))
+                x = arr[b-i-1]
+                arr[b-i-1] = arr[a-1+i]#a부터 바꿔주어야한다
+                arr[a-1+i] = x
+                # print(arr)
+    except:
+        break
+for i in range(len(arr)):
+    print(arr[i],end = " ")
+#사실은 reversed라는 메소드를 사용해도 된다
+# if b - a == 1 or b - a == 0:
+#                 t = arr[b-1]
+#                 arr[b-1] = arr[a-1]
+#                 arr[a-1] = t
+#                 #이거 대신에 이런식으로 swap을 쓰면된다
+#                 arr[a-1],arr[b-1] = arr[b-1],arr[a-1]
+#                 # print(arr)
+# else:
+#     arr[a-1:b] = reversed(arr[a-1:b])
