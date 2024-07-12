@@ -1,0 +1,9 @@
+n = int(input())
+arr = list(map(int, input().split()))
+total = 0.0#실수형 지정해주기
+arr_max = max(arr)
+for i in range(len(arr)):
+    arr[i] = arr[i]/arr_max*100
+    total += float(arr[i])
+# print(arr)
+print(float(total/n))
