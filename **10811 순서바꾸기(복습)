@@ -31,3 +31,4 @@ for i in range(len(arr)):
 #                 # print(arr)
 # else:
 #     arr[a-1:b] = reversed(arr[a-1:b])
+#print(*arr)
