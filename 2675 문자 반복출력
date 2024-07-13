@@ -1,0 +1,11 @@
+r = int(input())
+for i in range(r):
+    num = 0
+    arr = []
+    num,arr = input().split()
+    for j in range(len(arr)):
+        print(arr[j]*int(num),end="")
+    print()#방법 1:입력사이에 줄바꿈을 넣어주어야지 반복문 속 변수들이 초기화가된다
+#    num = 0  # 방법 2: 반복문 종료 후에 변수 초기화
+#    arr = []
+        
