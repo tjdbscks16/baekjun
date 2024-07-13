@@ -1,0 +1,18 @@
+# S = input()
+# arr = [-1]*26
+
+# for i in range(len(S)):
+#     if 'a' <= S <='z':
+#         num = ord(S[i])-ord('a')
+#         if(arr[num] == -1):            
+#             arr[num] = i
+# print(*arr)
+#이 문제는 그냥 별표 5개 기억하자 해결하기 좀 많이 어려웠다
+s = input()
+alp = 'abcdefghijklmnopqrstuvwxyz'
+for i in alp:
+    if i in s:
+        print(s.index(i),end = " ")
+    else:
+        print(-1,end=" ")
+        
