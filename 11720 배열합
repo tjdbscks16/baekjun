@@ -1,0 +1,11 @@
+num = int(input())
+s = input()
+# total = 0
+# for i in range(num):
+#     total += int(s[i])
+# print(total)
+ss = list(map(int,input()))
+print(sum(ss))
+
+경우가 두개있다 생각해봐 input().split()은 띄어쓰기이니까 split()을 뺴면 그냥 입력해도 되는 거니까 그냥 map(int,input())이렇게 하고
+sum함수를  사용해서 다 더해버리면 된다
