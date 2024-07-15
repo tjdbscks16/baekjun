@@ -2,7 +2,7 @@
 # arr = [-1]*26
 
 # for i in range(len(S)):
-#     if 'a' <= S <='z':
+#     if 'a' <= S[i] <='z':
 #         num = ord(S[i])-ord('a')
 #         if(arr[num] == -1):            
 #             arr[num] = i
