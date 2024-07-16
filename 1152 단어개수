@@ -8,3 +8,6 @@ if S[0] == " ":
 if S[len(S)-1] == " ":
     num -= 1        
 print(num)
+#띄어쓰기를 하니까 split()을 떠올려야지..
+s = input().split()
+print(len(s))
