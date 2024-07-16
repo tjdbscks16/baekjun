@@ -1,0 +1,10 @@
+S = input()
+num = 1
+for i in range(len(S)):
+    if S[i] == " ":
+        num+=1
+if S[0] == " ":
+    num -= 1
+if S[len(S)-1] == " ":
+    num -= 1        
+print(num)
