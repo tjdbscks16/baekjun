@@ -1,0 +1,8 @@
+str = input()
+rev = str[::-1]
+if str == rev:
+    print(1)
+else:
+    print(0)
+        
+#반복문에 pass를 사용해서 계속 넘겨줘도 된다
