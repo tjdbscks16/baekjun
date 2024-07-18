@@ -1,0 +1,24 @@
+# str = input().upper()
+# s = list(set(str))
+# num = [0]*len(s)
+# for i in range(len(str)):
+#     for j in range(len(s)):
+#         if s[j].lower ==  str[i].lower:
+#             num[j] += 1
+
+# if len(list(set(num))) == len(num):
+#     print(s[num.index(max(num))])
+# else:
+#     print("?")
+str = input().upper()
+s = list(set(str))
+num = []
+
+for i in s:
+    count = str.count(i)
+    num.append(count)
+if num.count(max(num)) >1:
+    print("?")
+else:
+    print(s[(num.index(max(num)))])    
+#메소드 사용해야 시간초과 안남
