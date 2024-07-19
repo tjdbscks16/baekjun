@@ -1,0 +1,36 @@
+# grade = ["A+","A0","B+","B0","C+","C0","D+","D0","F","P"]
+grade = [4.5,4.0,3.5,3.0,2.5,2.0,1.5,1.0,0]
+score = 0.0
+total = 0.0
+for i in range(20):
+    str = input().split()
+    if str[2] == "A+":
+        score += float(grade[0]*float(str[1]))
+        total += float(str[1])
+    if str[2] == "A0":
+        score += float(grade[1]*float(str[1]))
+        total += float(str[1])
+    if str[2] == "B+":
+        score += float(grade[2]*float(str[1]))
+        total += float(str[1])
+    if str[2] == "B0":
+        score += float(grade[3]*float(str[1]))
+        total += float(str[1])
+    if str[2] == "C+":
+        score += float(grade[4]*float(str[1]))
+        total += float(str[1])
+    if str[2] == "C0":
+        score += float(grade[5]*float(str[1]))
+        total += float(str[1])
+    if str[2] == "D+":
+        score += float(grade[6]*float(str[1]))
+        total += float(str[1])
+    if str[2] == "D0":
+        score += float(grade[7]*float(str[1]))
+        total += float(str[1])
+    if str[2] == "F": 
+        score += float(grade[8]*float(str[1]))
+        total += float(str[1])
+    if str[2] == "P":
+         total += 0
+print(score/total)
