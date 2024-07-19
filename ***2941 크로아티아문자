@@ -1,0 +1,14 @@
+#두세 문자가 한 글자로 묶일 수 있을 때 글자의 수를 세는 문제
+cro = ["c=","c-","dz=","d-","lj","nj","s=","z="]
+str = input()
+num = 0
+
+for i in cro:
+    # if str.find(i) == -1:
+    #     pass
+    # else:
+        # print(i)
+    num += str.count(i)
+    str = str.replace(i,"*")
+# print(str)
+print(num+len(str.replace("*","")))
