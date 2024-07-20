@@ -1,0 +1,17 @@
+#2차원 배열은 find랑 index가 아닌 enumerate를 사용해서 행별로 찾아줘야한다는 점이 있다
+a = [[0 for _ in range(9)]  for _ in range(9)]
+k = -1
+for i in range(9):
+    a[i] = list(map(int,input().split()))
+    
+for i in range(9):
+    if k < max(a[i]):
+        k = max(a[i])
+print(k)
+# cnt = sum(row.count(k) for row in a)
+
+for i, row in enumerate(a):
+    if k in a[i]:
+        print(i+1,row.index(k)+1)
+        break
+    
