@@ -1,0 +1,19 @@
+#생각을 잘 못했다 중복된거에 있는데 그전에 다른 문자였던거를 체크할려면
+#중복 문자가 아니라 전 문자가 변수로 두어서 계속 바뀌게 했어야한다
+def groupword(word):
+    check = []
+    before = ""
+    for i in word:
+        if i != before:
+            if i in check:
+                return False
+        check.append(i)
+        before = i
+    return True
+num  = int(input())
+cnt = 0
+for i in range(num):
+    word = input()
+    if groupword(word):
+        cnt +=1
+print(cnt)
