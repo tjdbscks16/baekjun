@@ -1,0 +1,22 @@
+#사실 범위가 주어져있고 그냥 100x100 짜리이고 1개짜리 정사각형이 들어간다는 거는 그냥 좌표하나다 하나라는 거니까
+#주어진 범위 내에서 좌표가 몇개 있는지 확인만 해주면 된다
+#처음에 생각을 못했는데 작게 보고 해주면 금방 풀 수 있는 문제였다
+num  = int(input())
+point = [[0 for _ in range(2)]  for _ in range(num)]
+xy = []
+# def cord(x,y):
+#     coord = (x,y)
+#     if coord   not in xy:
+#         xy.append(coord)
+for i in range(num):
+    point[i] = list(map(int,input().split()))
+for i ,row in enumerate(point):
+    point[i].append(row[0]+10)
+    point[i].append(row[1]+10)
+    for x in range(row[0],row[2]):
+        for y in range(row[1],row[3]):
+            cord = (x,y)
+            if cord not in xy:
+                xy.append((x,y))
+
+print(len(xy))
