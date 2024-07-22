@@ -1,8 +1,7 @@
-n,m = input().split()
+n,m = map(int,input().split())
 n_list = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 total = ""
-n = int(n)
-m = int(m)
+
 while(n > 0):
     remain = n % m
     total = n_list[remain] + total
