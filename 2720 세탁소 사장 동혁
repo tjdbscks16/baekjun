@@ -1,0 +1,18 @@
+#굳이 if로 조건문으로 안해도 된다 큰 단위부터 해주면 되니까 
+#값을 내려주는 식으로 하자
+num = int(input())
+cnt = [[0 for i in range(4)]for _ in range(num)]
+for i in range(num):
+    m= int(input())
+    cnt[i][0] = m//25
+    m = m%25
+    cnt[i][1] = m//10
+    m = m%10
+    cnt[i][2] = m//5
+    m = m%5
+    cnt[i][3] = m
+    
+for value in cnt:
+    print(*value)
+
+    
