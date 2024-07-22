@@ -1,0 +1,13 @@
+a = input().split()
+total = 0
+for i in range(len(a[0])):
+    if  int(a[1]) > 10 and 'A'<= a[0][i] <='Z':
+         total += (ord(a[0][i]) - 55)*(int(a[1])**(len(a[0])- i - 1))
+    else:
+        
+        total += int(a[0][i])*(int(a[1])**(len(a[0])- i - 1))
+print(total)
+#시간은 똑같이 걸리긴했는데그냥 n_list ="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"이렇게해서 index번호로 해줘도 된다
+#더 쉬운방법이 있다 int는 그냥 10진수로 수를 변환해 준다 따라서 base가 무슨진법이고n은 진법에 맞는 숫자를 확인하고 10진수로 수를 바꿔준다
+n,base = input().split()
+print(int(n,int(base)))
