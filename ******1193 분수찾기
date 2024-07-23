@@ -1,0 +1,38 @@
+#num은 숫자를 받는거고 x가 몇번째 줄인지 확인하는 거다
+# 그래서 num 을 x만큼 빼주다가 x보다 작아질때 분모가 나오는 거다
+# a,b는 차피 2의 배수 일때는 제대로 아니면 반대로 나오는 것을 활용한다
+
+num = int(input())
+
+x = 1
+while num > x:
+    num -= x
+    x += 1
+if x %2 == 0:
+    a = num
+    b = x - num + 1
+else:
+    a = x -num +1
+    b = num
+print(f'{a}/{b}')
+##############################################################################################################
+num = int(input())
+k = 1
+found = False
+for i in range(1,1000000):
+    for j in range(i):
+        x = 1 + j
+        y = i - j
+        if  num == k :
+            if i % 2 == 0:
+                print(f"{x}/{y}")
+                found = True
+                break
+            else:
+                print(f"{y}/{x}")
+                found = True
+                break
+        else:
+            k+=1
+    if found:
+        break
