@@ -1,0 +1,33 @@
+#단순하게 생각하기
+num = int(input())
+pprime = []
+def prime(num):
+    cnt  = 0
+    for i in range(1,num+1):
+        if num % i == 0:
+            cnt+=1
+    if cnt == 2:
+        return True
+if num == 1:
+    print()
+elif  prime(num):
+    print(num)
+else:
+    for i in range(1,num+1):
+        if num % i == 0 and prime(i):
+            pprime.append(i)
+    for i in range(len(pprime)):
+        while(num % pprime[i] == 0):
+            num //= pprime[i]
+            print(pprime[i])
+ ##################################################           
+num = int(input())
+
+if num == 1:
+    print()
+else:
+    for i in range(2,num+1):
+        if num % i == 0:
+          while(num % i == 0):
+                num //= i
+                print(i)
