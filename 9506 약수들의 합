@@ -1,0 +1,17 @@
+
+while(1):
+    dev = []
+    a = int(input())
+    x = 0
+    if a == -1:
+        break
+    for i in range(a):
+        if a%(i+1) == 0 and a != i+1:
+            dev.append(i+1)
+    for i in range(len(dev)):
+         x += dev[i]
+    if x != a:
+        print("%d is NOT perfect. "%a)
+    else:
+         print(f"{a} = {' + '.join(map(str, dev))}")
+            
