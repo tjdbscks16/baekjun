@@ -1,0 +1,9 @@
+a,b = map(int,input().split())
+dev = []
+for i in range(a):
+    if a%(i+1) == 0:
+        dev.append(i+1)
+if b > len(dev):
+    print(0)
+else:
+    print(dev[b-1])
