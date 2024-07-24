@@ -1,0 +1,14 @@
+str = []
+while(1):
+    a,b = map(int,input().split())
+    if a == 0 and b == 0:
+        break
+    else:
+        if b % a == 0:
+            str.append("factor")
+        elif a % b == 0:
+            str.append("multiple")
+        else:
+            str.append("neither")
+for i in str:
+    print(i)
