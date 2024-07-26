@@ -1,0 +1,4 @@
+num = int(input())
+
+print(num**2)
+print(2)#n의 제곱이니까 최고차항이 2인걸 표현한거다
