@@ -1,0 +1,50 @@
+import sys
+#원래는 이렇게 양쪽으 계속 쪼개주어서 합쳐 줄려고 해서 코드가 길게 나왔는데 진짜 간단하게 바꿀수도 있는 문제였다
+def makeline(num):
+    num = 3**num
+    lines = "-" * num
+    return lines
+def line(lines,num):
+    total_list = list(lines)
+    cnt = len(total_list)
+    if cnt<3:
+        return lines
+    mid = cnt//3
+    midend = mid*2
+    
+    for i in range(mid,midend):
+        total_list[i] = " "
+    
+    left_part = line(''.join(total_list[:mid]), num)
+    right_part = line(''.join(total_list[midend:]), num)
+    return left_part + "".join(total_list[mid:midend]) + right_part
+
+while True:
+    try:
+        line_input = sys.stdin.readline().strip()
+        if line_input == '':
+            break
+        num = int(line_input)
+        if 0 <= num <= 12:
+            initial_line = makeline(num)
+            result = line(initial_line, num)
+            print(result)
+    except EOFError:
+        break
+  #########################################################################
+  def cut(n): #어차피 재귀이니까 양쪽거를 쪼개서 부르고 쪼개서 부르는 식으로 하면됐다 좀 더 생각하자
+    if n == 1:
+        return "-"
+    else:
+        left = cut(n // 3)
+        center = " " * (n // 3)
+        right = cut(n//3)
+        return left + center + right
+
+while True:
+    try:
+        N = int(input())
+        result = cut(3 ** N)
+        print(result)
+    except:
+        break
