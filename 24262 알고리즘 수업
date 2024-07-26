@@ -1,0 +1,8 @@
+ #입력값에 상관없이 딱 한번 A배열의 특정 인덱스를 조회해 리턴하므로
+MenOfPassion(A[], n) {
+    i = ⌊n / 2⌋;
+    return A[i]; # 코드1
+}
+num =  int(input())
+print(1)
+print(0)  
