@@ -1,0 +1,22 @@
+
+n = int(input())
+num = len(str(n))
+
+def divine(x):
+    st = str(x)
+    total = x
+    for i in range(len(st)):
+        total += int(st[i])
+    return total
+
+found = False#그냥 이걸로 항상 찾는 걸로 하자 반복문에서 원하는 값 찾을때
+for i in range(1, n): # 범위 설정을 max(1, n - 9 * num)
+    if divine(i) == n:
+        print(i)
+        found = True
+        break
+
+if not found:
+    print(0)
+    
+#num = sum((map(int, str(i))) 각 자리수 더하기
