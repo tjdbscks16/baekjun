@@ -1,0 +1,15 @@
+# a,b,c,d,e,f = map(int,input().split())
+# if b*d - e*a == 0:
+#     print(0,0)
+# else:  
+#     x = int((b*f - e*c) / (b*d - e*a))
+#     y = int((c*d - a*f) / (b*d - e*a))
+# print(x,y)
+
+a,b,c,d,e,f = map(int,input().split())
+
+for x in range(-999,1000):
+    for y in range(-999,1000):
+        if a*x + b*y == c and d*x + e*y ==f:
+            print(x,y)
+            break
