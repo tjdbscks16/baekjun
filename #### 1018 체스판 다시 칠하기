@@ -1,0 +1,39 @@
+row,col = map(int,input().split())
+
+chess = [[0 for _ in range(col)] for _ in range(row)]
+
+for i in range(row):
+    chess[i] = input() #체스판 입력받기
+    
+min_time = 10000
+#결국 생각을 잘못한건데 그냥 전체 체스판을 
+# 8x8로 만들수 있는 모든 경우의 수를 시도해서 젤 작은걸 찾는거야
+
+for rowstart in range(row - 7):
+    for colstart in range(col - 7):
+        
+        bpattern = 0
+        wpattern = 0
+        
+        for i in range(8):
+            for j in range(8):
+                #여기서 이제 8x8의 각 색깔을 다 비교해주는거
+                nowchess = chess[rowstart + i][colstart + j]
+                #bpattern은 이제 bwbw으로 할경우 얼마나 바꾸는지
+                #wpattern은 이제 wbwb으로 할경우 얼마나 바꾸는지 확인하는거
+                
+                if(i+j) %2 == 0:
+                    if nowchess != "B":
+                        bpattern += 1
+                    if nowchess != "W":
+                        wpattern += 1
+                else:
+                    if nowchess != "W":
+                        bpattern += 1
+                    if nowchess != "B":
+                        wpattern += 1
+        
+        
+        min_time = min(min_time,bpattern,wpattern)
+        
+print(min_time)
