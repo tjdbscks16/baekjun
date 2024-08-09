@@ -1,0 +1,16 @@
+n = int(input())
+five = [i for i in range(n//5+1)]
+if n%5 == 0:
+    print(n//5)
+elif any((n - 5*(i)) %3 == 0 for i in five):
+    for i in range(max(five),-1,-1):
+        remain = n - 5*i
+        if remain %3 == 0:
+            print(i+remain//3)
+            break
+elif n%3 == 0 :
+    print(n//3)
+else:
+    print(-1)
+            
+            
