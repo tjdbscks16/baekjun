@@ -1,0 +1,13 @@
+import sys
+#for문 속에서 append를 사용하게 되면 
+# 메모리 재할당이 이루어져서 메모리를 효율적으로 사용못한다.
+n = int(input())
+num = [0]*10001
+for _ in range(n):
+    num[int(sys.stdin.readline())] += 1
+#예를들면 num[1] 즉 1이 4번 나오면 num[1] = 4이고 자동으로
+#인덱스 번호 순이니까 자동으로 인덱스번호로 몇번 나왔는지 출력
+for i in range(len(num)):
+    if num[i] != 0:
+        for j in range(num[i]):
+            print(i)
