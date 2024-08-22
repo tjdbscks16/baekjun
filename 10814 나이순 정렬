@@ -1,0 +1,9 @@
+import sys
+num  = int(sys.stdin.readline())
+member = []
+for i in range(num):
+    age,name = input().split()
+    member.append((int(age),name))
+member.sort(key = lambda x : x[0])
+for tup in member:
+    print(tup[0],tup[1])
