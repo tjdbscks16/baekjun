@@ -1,0 +1,17 @@
+import sys
+num  = int(sys.stdin.readline())
+cor = list(map(int,input().split()))
+
+
+ncor = sorted(set(cor))
+#딕셔너리 사용
+#{ dict[요소] : 요소의 index }의 형태로 저장해 줌으로써 
+# dict[i]의 형태로 시간복잡도 O[1]로 답을 뽑을 수 있다
+dic = {ncor[i] : i for i in range(len(ncor))}
+for i in cor:
+    print(dic[i],end = " ")
+# result = [ncor.index(cor[i]) for i in range(num)]
+# for i in range(num):
+#     if cor[i] in ncor:
+#         cor[i] = ncor.index(cor[i])
+# print(*result)
