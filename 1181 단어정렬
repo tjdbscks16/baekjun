@@ -1,0 +1,11 @@
+import sys
+num = int(sys.stdin.readline())
+
+dic = []
+for i in range(num):
+    word = input()
+    if word not in dic:
+        dic.append(word)
+dic.sort(key = lambda x: (len(x),x))
+for i in dic:
+    print(i)
