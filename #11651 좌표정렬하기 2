@@ -1,0 +1,18 @@
+import sys
+n = sys.stdin.readline()
+num = int(n)
+cor = []
+for i in range(num):
+    x,y = map(int,input().split())
+    cor.append((x,y))
+#시간초과 가 나서 버블정렬은 사용이 불가했다
+# for i in range(num):
+#     for j in range(0,num - i -1):
+#         if (cor[j][1] > cor[j+1][1]) or  (cor[j][1] == cor[j+1][1] and cor[j][0] >cor[j+1][0]):
+#             cor[j],cor[j+1] = cor[j+1],cor[j]
+cor.sort(key = lambda x : (x[1],x[0]))
+
+for tup in cor:
+    print(tup[0],tup[1])
+#sort(key = lambda x : (x[0], x[1]))	여러 기준으로 정렬하려 할 때, 튜플 형식으로 (첫 번째 기준, 두 번째 기준)을
+#적어주면 된다.
