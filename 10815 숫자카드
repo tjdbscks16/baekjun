@@ -1,0 +1,14 @@
+import sys
+n = int(sys.stdin.readline())
+#중복된 요소가 없으니까 집합으로 변환시켜서 찾는것
+n_list = set(list(map(int,input().split())))
+m = int(sys.stdin.readline())
+m_list = list(map(int,input().split()))
+
+result = []
+for i in m_list:
+    if i in n_list:
+        result.append(1)
+    else:
+        result.append(0)
+print(*result)
