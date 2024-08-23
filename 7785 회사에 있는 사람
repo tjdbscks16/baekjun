@@ -1,0 +1,12 @@
+import sys
+n = int(sys.stdin.readline())
+#중복허용이 안나오면 그냥 set 사용
+enter = set()
+for i in range(n):
+    name,log = map(str,sys.stdin.readline().strip().split())
+    if log == 'enter':
+        enter.add(name)
+    elif log == 'leave':
+        enter.remove(name)
+for i in sorted(enter,reverse=True):
+    print(i)
