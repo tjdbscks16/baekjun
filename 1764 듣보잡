@@ -1,0 +1,13 @@
+import sys
+input = sys.stdin.readline
+n,m = map(int,input().split())
+nset = set()
+mset = set()
+for _ in range(n):
+    nset.add(input().rstrip())
+for _ in range(m):
+    mset.add(input().rstrip())
+nmset  = nset & mset
+print(len(nmset))
+for i in sorted(nmset):
+    print(i)
