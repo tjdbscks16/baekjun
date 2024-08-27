@@ -1,0 +1,8 @@
+import sys
+s = sys.stdin.readline().rstrip()
+n = len(s)
+a = set()
+for i in range(n):
+    for j in range(n-i):
+        a.add(s[j:j+1+i])
+print(len(a))
