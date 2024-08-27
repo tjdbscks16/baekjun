@@ -1,0 +1,31 @@
+# n,m = map(int,input().split())
+# pokemon = []
+# findpoke = []
+# for i in range(n):
+#     poke = input()
+#     pokemon.append((poke,str(i+1)))
+# for i in range(m):
+#     findpoke.append(input())
+# for a in findpoke:
+#     for i in range(len(pokemon)):
+#         if a == pokemon[i][0]:
+#             print(pokemon[i][1])
+#         elif a == pokemon[i][1]:
+#             print(pokemon[i][0])
+#딕셔너리를 사용해서 숫자부분과 문자열부분을 따로 찾아주면 더 빠른 시간을 가지게 된다 따라서 o(1) 가짐
+import sys
+input = sys.stdin.readline
+n,m = map(int,input().split())
+iddic = {}
+namedic = {}
+for i in range(n):
+    pokemon = input().rstrip()
+    iddic[i+1] = pokemon
+    namedic[pokemon] = i+1
+for _ in range(m):
+    x = input().rstrip()
+    if x.isdigit():#숫자인지 판별하고 숫자면 namedic을 사용한다
+        print(iddic[int(x)])
+    else:
+        print(namedic[x]) 
+    
