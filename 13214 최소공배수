@@ -1,0 +1,11 @@
+
+n,m = map(int,input().split())
+N = n
+M = m
+s = 1
+while s!= 0:
+    s = N%M
+    N = M
+    M = s
+print((n*m)//N)
+    
