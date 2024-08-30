@@ -1,0 +1,27 @@
+import sys
+input = sys.stdin.readline
+a,b = map(int,input().split())
+c,d = map(int,input().split())
+#분모 통분
+B = b
+D = d
+s = 1
+while s!= 0:
+    s = B%D
+    B = D
+    D = s
+gcd = B
+lcd = (b*d)//gcd
+a = a*(lcd//b)
+c = c*(lcd//d)
+#기약분수
+n = a+c
+N = n
+k = 1
+LCD = lcd
+while k!= 0:
+    k = N% LCD
+    N = LCD
+    LCD = k
+result = N
+print(n//result,lcd//result)
