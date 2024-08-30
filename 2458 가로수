@@ -1,0 +1,28 @@
+import sys
+input  = sys.stdin.readline
+def gcd(a,b):
+    while b:
+        a,b = b,a%b
+    return a
+n = int(input())
+tree= []
+#간격만큼 더해주고 길이 비교하자
+for i in range(n):
+    tree.append(int(input()))
+inter = [tree[i+1]-tree[i] for i in range(len(tree)-1)]
+mini = inter[0]
+for i in inter[1:]:
+    mini  = gcd(mini,i)
+    if mini == 1:
+        break
+    
+# newtree = [] 메모리 초과가 나온다 배열보다는 직접 계산해서 해보는 것을 선택
+# n = tree[0]
+# while n <= tree[-1]:
+#     newtree.append(n)
+#     n+=mini
+start = tree[0]
+end = tree[-1]
+total_positions = (end - start) // mini + 1
+new_trees_count = total_positions - n
+print(new_trees_count)
