@@ -1,6 +1,6 @@
 import sys
 input  = sys.stdin.readline
-
+#소수를 판별할때 작은수다 찾긴보단 제곱근보다 작은 수로만 해줘도 된다
 def primenumber(x):
     for i in range(2,int(x**0.5)+1):
         if x % i == 0:
