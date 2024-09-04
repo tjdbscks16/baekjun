@@ -1,0 +1,31 @@
+import sys
+input = sys.stdin.readline
+#소수를 하나하나 찾으면 시간초과 발생
+# def primenumber(x):
+#     if x<2:
+#         return False
+#     for i in range(2,int(x**0.5)+1):
+#         if x%i == 0:
+#             return False
+#     return True
+#최대값이 주어졌으니까 최대값의 2배까지의 
+# 소수가 몇개인지 미리 리스트로 만들어준다
+
+def prime(num):
+    primenum = [True] * (num+1)
+    primenum[1] = primenum[0] = False
+    for i in range(2,int(num**0.5)+1):
+        if primenum[i]:
+            for j in range(i*i,num+1,i):
+                primenum[j] = False
+    return primenum
+maxnum = 123456 *2 #2n의 최대값
+primelist = prime(maxnum)
+while(True):
+    n = int(input())
+    if n == 0:
+        break
+    #n보다 크고, 2n보다 작거나 같은 
+    print(sum(primelist[n+1:2*n+1]))
+    
+    
