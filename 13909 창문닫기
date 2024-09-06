@@ -1,0 +1,19 @@
+import sys#완전제곱수만큼 열려있는거다
+input = sys.stdin.readline
+n = int(input())
+x = 1
+result = 0
+while x*x <=n:
+    x+=1
+    result+=1
+print(result)
+#이렇게 되면 메모리 초과 큰수가 나오면 먼저 규칙성을 찾아보는 연습
+# window = [0 for _ in range(n+1)]
+# for i in range(1, n+1):
+#     for j in range(i, n+1, i):
+#         if window[j]:
+#             window[j] = 0
+#         else:
+#             window[j] = 1
+# print(window)
+# print(window.count(1))
