@@ -1,0 +1,18 @@
+#최소 모음 한개 와 최소 자음 2개 인데 L개로 구성되어있다
+#오름차순으로 정렬되는 거다(사전식)
+from itertools import combinations
+l,c = map(int,input().split())
+alp = sorted(map(str,input().split()))
+con = ["a","e","i","o","u"]
+con =[c for c in con if c in alp]#모음분류
+vow =[c for c in alp if c not in con]#자음분류
+
+comb = list(combinations(alp,l))
+
+for a in comb:
+    # print(a)
+    if any(i in a for i in con) and sum(i in a for i in vow) >= 2:
+        print(''.join(a))
+#문자열로 출력
+# for i in comb:
+#     print(''.join(i))
